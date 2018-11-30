@@ -21,7 +21,7 @@ public class Runner implements CommandLineRunner {
      * Constructor used to give access to the necessary objects for sending the message and
      * for confirming its arrival
      *
-     * @param rabbitTemplate
+     * @param rabbitTemplate the object used for sending the message synchronously
      * */
     public Runner(RabbitTemplate rabbitTemplate) {
         // The object used for sending the message synchronously
@@ -29,7 +29,8 @@ public class Runner implements CommandLineRunner {
     }
 
     /**
-     * This method sends the testing message to the topic "spring-boot-application"
+     * This method sends all the messages typed in the terminal (until linebreak)
+     * to the topic "spring-boot-application"
      *
      * @param args array of messages to be sent
      * */
