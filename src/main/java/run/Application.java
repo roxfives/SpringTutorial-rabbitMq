@@ -23,7 +23,7 @@ public class Application {
     static final String queueName = "spring-boot";
 
     public static void main(String[] args) throws InterruptedException {
-        SpringApplication.run(Application.class, args).close();
+        SpringApplication.run(Application.class, args);
     }
 
     public static String getTopicExchangeName() {
